@@ -1,0 +1,385 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+    transition: all 0.3s ease;
+
+}
+
+.banner {
+    background: #283055;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.banner .container {
+    padding: 50px 0;
+}
+
+
+
+.banner .container h1:hover {
+    letter-spacing: 2px;
+}
+
+
+
+.banner .container p span {
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0 10px;
+    padding-bottom: 3px;
+    padding-right: 13px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mainContainer {
+    display: flex;
+}
+
+.mainContainer .cardContainer {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.mainContainer .cardContainer .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.mainContainer .cardContainer .card:hover {
+    transform: scale(1.1);
+}
+
+.mainContainer .cardContainer .card .cardImage {
+    height: 200px;
+    overflow: hidden;
+}
+
+.mainContainer .cardContainer .card .cardImage img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    object-fit: cover;
+}
+
+.mainContainer .cardContainer .card:hover .cardImage img {
+    transform: scale(1.2);
+}
+
+.mainContainer .cardContainer .card .cardContent {
+    padding: 20px 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainContainer .cardContainer .card .cardContent h3 {
+    text-transform: capitalize;
+}
+
+.mainContainer .cardContainer .card .cardContent button {
+    text-transform: uppercase;
+}
+
+.mainContainer .addToCartContainer {
+    height: 100%;
+    width: 80px;
+    /* background-color: #002fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.mainContainer .addToCartContainer.active {
+    width: 400px;
+    height: 60vh;
+}
+
+.mainContainer .addToCartContainer .totalContainer {
+    margin-right: 40px;
+    transform: scale(0.0);
+}
+
+.mainContainer .addToCartContainer.active .totalContainer {
+    transform: scale(1.0);
+}
+
+.mainContainer .addToCartContainer .toggler {
+    width: 50px;
+    height: 50px !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #283055;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.mainContainer .addToCartContainer .toggler:hover {
+    transform: scale(1.1);
+}
+
+.mainContainer .addToCartContainer .toggler .cartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+ 
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: red;
+    padding-top: 2px;
+}
+
+.mainContainer .addToCartContainer .addedItems {
+    overflow-y: hidden;
+    width: 0%;
+    transform: scale(0.0);
+}
+
+.mainContainer .addToCartContainer.active .addedItems {
+    overflow-y: scroll;
+    width: 100%;
+    transform: scale(1.0);
+}
+
+.mainContainer .addToCartContainer .addedItems .card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0px 0px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    width: 0%;
+    height: 0%;
+    display: none;
+}
+
+.mainContainer .addToCartContainer.active .addedItems .card {
+    margin: 10px 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.mainContainer .addToCartContainer .addedItems .card:hover {
+    transform: scale(1.1);
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.mainContainer .addToCartContainer .addedItems .card:hover .cardImage {
+    width: 150px;
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardContent {
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardContent h3 {
+    text-transform: capitalize;
+ 
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardContent .group {
+    display: flex;
+    align-items: center;
+}
+
+.mainContainer .addToCartContainer .addedItems .card .cardContent .group p {
+    width: 100%;
+    margin: 0;
+}
+.but{
+    display: inline-block;
+    background-color:#3e6553;
+    color: #FFF;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+
+    transition: .3s;
+    border-style: none;
+  }
+.colour{
+  color: black;
+}
+.headi{
+  height: -40px;
+  margin-bottom: -12px;
+  /* border: 3px solid red; */
+  text-align: center;
+  /* margin: 35px; */
+  position: relative;
+  top: 27px;
+}
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 1rem 1.75rem;
+  border-radius: .5rem;
+
+  transition: .3s;
+}
+a{
+  text-decoration: none;
+}
+.probutton{
+  height: 66px;
+  position: relative;
+  top: 27px;
+  text-align: center;
+  background: none;
+  color: white;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+/* ////////////////////////////// navbar ////////////////////// */
+/* ########################### navbar styling ############################### */
+
+/* for desktop mode */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    box-shadow: 0px 5px 10px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.8s ;
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+
+}
+.logo{
+    order: 1;
+    font-size: 2rem;  
+     
+}
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.4s ease-in-out;
+}
+.navbar a:hover{
+    color: #117964;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* ////////////////////////////// navbar ////////////////////// */
+
+
+
+
+
+
+/* /////////////////footer///////////// */
+
+#footer h2{
+  text-align: center;
+  font-size: 2rem;
+  padding: 3rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(65,65,65);
+}
+/* /////////////////footer///////////// */
+.br{
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="contaainer">
+        <h2>Login</h2>
+        <form action="">
+            <div class="form-group">
+                <input id="uname" type="text" required>
+                <label for="">Username</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input id="upass" type="password" required>
+                <label for="">Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <p > <input type="checkbox" required>Remember me <a href="">forget Password</a> </p>
+            <button id="btn" type="submit">Login</button>
+            <p>Don't Have a Account ? <a href="./register.html">Register</a></p>
+            
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var loginButton = document.getElementById('btn');
+            var usernameInput = document.getElementById('uname');
+            var passwordInput = document.getElementById('upass');
+
+            // Disable the login button initially
+            loginButton.disabled = true;
+
+            // Enable/disable the login button based on user input
+            function toggleLoginButton() {
+                if (usernameInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+                    loginButton.disabled = false;
+                } else {
+                    loginButton.disabled = true;
+                }
+            }
+
+            // Add event listeners for input fields
+            usernameInput.addEventListener('input', toggleLoginButton);
+            passwordInput.addEventListener('input', toggleLoginButton);
+
+            // Handle form submission
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var name = usernameInput.value.trim();
+                var pass = passwordInput.value.trim();
+
+                var uname = localStorage.getItem("myname");
+                var upass = localStorage.getItem("mypass");
+
+                if (name === uname && pass === upass) {
+                    alert("Login successful");
+                    window.location.href = "./web/index.html";
+                } else {
+                    alert("Invalid username or password");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

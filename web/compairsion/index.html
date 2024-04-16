@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Compare Page</title>
+      
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="lines line1"></span>
+                <span class="lines line2"></span>
+                <span class="lines line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li ><a href="./index.html" .active >home</a></li>
+                <li><a href="#about">about</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">category <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="./sanasafinaz.html">Sana Safinaz</a>
+                        <a href="./Zara.html">Zara</a>
+                        <a href="./Idea.html">Ideas</a>
+                    </div>
+                </li>
+                <!-- <li><a href="#food-menu">food-menu</a></li> -->
+                <li><a href="#testimonials">testimonial</a></li>
+                <li><a href="compairsion/compairsion.html">Compare Products</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+          <i>  <h1 class="logo">DA Fashions </h1></i>
+        </div>
+    </nav>
+     <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+           <!-- <h1 class="main-title main">EAT RIGHT FOOD</h1>
+            <p>eat healthy food, it's good for you</p>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>-->
+        </div>
+    </section> 
+ <!-- ///////////////////////////////////////////////    main////////////////////////////// -->
+ <h1 class="display-5 my-5 text-center">Compare Page </h1>
+    <div class="container">
+        <div class="col-md-9 mx-auto">
+            <table class="table">
+                <tr class="bg-light">
+                    <th>Select Product</th>
+                    <th width="300px">
+                        <select class="form-control" id="select1" onchange="item1(this.value)">
+                            <option value="0">-- Sana Safinaz --</option>
+                        </select>
+                    </th>
+                    <th width="300px">
+                        <select class="form-control" id="select2" onchange="item2(this.value)">
+                            <option value="0">-- Ideas --</option>
+                        </select>
+                    </th>
+                    <th width="300px">
+                        <select class="form-control" id="select3" onchange="item3(this.value)">
+                            <option value="0">-- Zara --</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Product Image</th>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                            id="img1" alt=" ">
+                    </td>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                            id="img2" alt=" ">
+                    </td>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                            id="img3" alt=" ">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Product Price</th>
+                    <td id="price1">N/A</td>
+                    <td id="price2">N/A</td>
+                    <td id="price3">N/A</td>
+                </tr>
+                <tr>
+                    <th>Product Description</th>
+                    <td id="desc1">N/A</td>
+                    <td id="desc2">N/A</td>
+                    <td id="desc3">N/A</td>
+                </tr>
+                <tr>
+                    <th>Product Brand</th>
+                    <td id="brand1">N/A</td>
+                    <td id="brand2">N/A</td>
+                    <td id="brand3">N/A</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+ <!-- ///////////////////////////////////////////////    main////////////////////////////// -->
+    
+        </div>
+    </div>
+    <footer id="footer">
+        <h2>Da Fashion website &copy; all right reserved.</h2>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js "></script>
+</body>
+
+</html>
+
+<script src="sana-safinaz.js"></script>
+<script src="zara.js"></script>
+<script src="ideas.js"></script>
+
+<script src="main.js"></script>
